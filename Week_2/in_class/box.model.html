@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Model Pixels</title>
+	<!-- Internal Style sheet, applies to only this page-->
+	<style type="text/css">
+	/* tag selector to apply to all divs by default on our page */
+	div {
+		border-width: 2px;
+		border-color: mediumpurple;
+		border-style: solid;
+		min-height: 20px;
+		overflow: visible;
+		border-top-color: : mediumpurple; 
+		border: 5px solid mediumpurple;
+	}
+
+	/* 
+	class selectors apply only to the elements that receieve the 
+	class attribute that matches
+	*/
+
+	.container{
+		width: 900px;
+		margin: 0 auto;
+	}
+	
+	/* now we want to make each of the thumbs stack horizontally */
+
+	.thumbnail{
+		border: 1px solid #FF8234;
+		width: 298px;
+		height: 298px;
+		float: left;
+	}	
+
+	/* clearfix hacks */
+
+	.clear-fix-1{
+		overflow:auto;
+	}
+
+	br.clear{
+		clear: both;
+	}
+
+	/* 
+	right way to clear out floats
+	the rule of thumb is after you float, you have to clear:both; 
+	:: after is a pesudo class selector, this inserts an element via css called after
+	it receives its content, clears both;
+	*/
+
+	.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+	}
+
+	.thumbnail-padding{
+		border: 5px solid green;
+		width: 270px;
+		height: 270px;
+		padding: 10px;
+		float: left;
+	}
+
+	.thumbnail-margin{
+		border: 5px solid red;
+		width: 270px;
+		height: 270px;
+		margin: 10px;
+		float: left;
+	}
+
+	.thumbnail-box{
+		box-sizing: border-box;
+		width: 300px;
+		height: 300px;
+		padding: 10px;
+		border: 5px solid grey;
+		float: left;
+		/*
+		margin doesn't get taken into account even with border-box 
+		we still have to do math
+		*/
+		margin: 5px;
+		width: 290px;
+	}
+
+	.container-inline{
+		width: 1000px;
+		margin: 0 auto;
+		font-size: 0;
+		color: black;
+	}
+
+	.thumbnail-in{
+		box-sizing: border-box;
+		width: 250px;
+		border: 3px solid black;
+		display: inline-block;
+		font-size: 24px;
+	}
+
+
+	</style>
+	
+</head>
+<body>
+	<div class="container clearfix">
+		<div class="thumbnail"></div>
+		<div class="thumbnail"></div>
+		<div class="thumbnail"></div>	
+	</div>
+
+	<div class="container clearfix">
+		<div class="thumbnail-padding"></div>
+		<div class="thumbnail-padding"></div>
+		<div class="thumbnail-padding"></div>	
+	</div>
+
+	<div class="container clearfix">
+		<div class="thumbnail-margin"></div>
+		<div class="thumbnail-margin"></div>
+		<div class="thumbnail-margin"></div>	
+	</div>
+
+	<div class="container clearfix">
+		<div class="thumbnail-box"></div>
+		<div class="thumbnail-box"></div>
+		<div class="thumbnail-box"></div>
+	</div>
+
+	<div class="container clearfix">
+		<div class="thumbnail-in"></div>
+		<div class="thumbnail-in"></div>
+		<div class="thumbnail-in"></div>
+		<div class="thumbnail-in"></div>		
+	</div>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
