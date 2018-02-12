@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+html{
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+html,
+body{
+	margin: 0;
+}
+
+.container{
+	width: 900px;
+	margin: 0 auto;
+}
+
+.polariod{
+	position: relative;
+	width: 240px;
+	display: inline-block;
+	margin: 20px;
+}
+
+.polariod img{
+	width: 100%;
+	height: auto;
+	border-bottom-width: 45px;
+	/* h-shadow | v-shadow | blur | spread | color */
+	-webkit-box-shadow: 3px 3px 10px 3px rgba(10,10,10,0.5);
+	-moz-box0shadow: 3px 3px 10px 3px rgba(10,10,10,0.5);
+	box-shadow: 3px 3px 10px 3px rgba(10,10,10,0.5);
+}
+
+.polariod p{
+	position: absolute;
+	width: 1;
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+	font-weight: 400;
+	font-size: 18px;
+
+}
+
+/* Nav Bar Styles */
+ 
+header{
+	width: 80%;
+	padding: 0 10%;
+	height: 50px;
+	position: fixed;
+	margin-bottom: 10px;
+	z-index: 10;
+	background-color: black;
+	background: url(../img/cheap_diagonal_fabric.png);
+
+} 
+
+header h1{
+	color: #333;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	font-family: 'Kaushan Script', cursive;
+
+}
+
+nav{
+	float: right;
+	display: inline-block;
+}
+
+nav ul{
+	list-style-type: none;
+	text-align-center;
+	padding: 0;
+	margin: 0;
+	background-color: rgba(40,40,40,0.1);
+}
+
+nav li{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px;
+	width: 120px;
+	display: inline-block;
+
+}
+
+nav a{
+	text-decoration: none;
+	color: #999;
+	display: block;
+	text-align: center;
+	transition: all 0.4s;
+}
+
+nav a:hover {
+	background-color: rgba(40,40,40,0.5);
+	color: #fff;
+}
+
+nav a.active{
+
+	background-color: white;
+	color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

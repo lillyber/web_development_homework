@@ -1,0 +1,37 @@
+html,
+body{
+	margin: 0;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* when you float you always need to clearfix
+the container element to make sure that it wraps 
+around the floated content as expected */
+
+.clearfix::after{
+	display: block;
+	clear: both;
+	/* to ensure cross browser and legacy browser compability */
+	height: 0;
+	font-size: 0;
+	content: '';
+	/* super paranoid mode */
+	visibility: hidden;
+}
+
+div, 
+header, 
+footer, 
+section, 
+article, 
+aside, 
+main {
+	min-height: 100px;
+	/* RGBA */
+	background-color: rgba(0,100,255,0.2);
+}
+
