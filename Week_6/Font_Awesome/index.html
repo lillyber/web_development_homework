@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Awesome</title>
+	<link rel="stylesheet" href="Web_fonts_css/css/fontawesome-all.css">
+	<style type="text/css" media="screen">
+	/* flex bloxes are the container they display  */
+		header{
+			height: 400px;
+			border: 1px solid black;
+			background-color: #ccc;
+			display: flex;
+			flex-direction: row;
+			/*justify-content: flex-end;*/
+			/*justify-content: flex-start;*/
+			/*justify-content: space-around;*/
+			justify-content: space-between;
+
+		}
+
+	.logo{
+		color: red;
+	}
+
+	nav{
+		/* nav is both a flex box and a flex item */
+		display: flex;
+		/* flex items can be told to grow shrink or align themselves differently than the default */
+		/* flex: grow, shrink, min-dimension; */
+		flex: 0 1 60%;
+		justify-content: space-between;
+	}	
+	</style>
+	
+</head>
+
+<body>
+	<header>
+		<span class="logo"><i class="fa fa-camera-retro fa-4x"></i></span>
+		<i class="fa fa-camera-retro fa-4x"></i>
+		<i class="fa fa-camera-retro fa-4x"></i>
+		<i class="fa fa-camera-retro fa-4x"></i>
+		<i class="fa fa-camera-retro fa-4x"></i>
+	</header>
+</body>
+</html>
