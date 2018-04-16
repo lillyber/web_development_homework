@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Selector</title>
+</head>
+<body>
+
+	<div id="myID">This is a div we will grab with a jquery id selector</div>
+
+	<p class="goat">Paragraph 1</p>
+	<p class="goat">Paragraph 2</p>
+	<p class="goat">Paragraph 3</p>
+	<p class="goat">Paragraph 4</p>
+
+	<ul>
+		<li class="goat">Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+
+
+<!-- always load jQuery before you start writing or using jQuery syntax -->
+<script   
+	src="http://code.jquery.com/jquery-3.3.0.slim.min.js"   
+	integrity="sha256-AMg3I7ya76OLPD9M+Mk7kqrA29HUn/FuGBfT/9Uf9ls="   
+	crossorigin="anonymous"></script>
+<!-- our own custom jQuery functions etc... -->
+
+<script type="text/javascript">
+	//// the old vanilla js way of waiting for the page to load
+	//document.addEventListener('DOMContentLoaded', function() {
+	//	// anonymous function
+	//});
+
+	//document.addEventListener('DOMContentLoaded', init);
+	//function init(){
+		//stuff to do on load...
+	//}
+
+
+	// onLoad jQuery way
+	$(document).ready(function() { 
+		console.log('waiting for the page to load jQuery way');
+		////add event listeners by using the old school way
+		//document.getElementById('myID').addEventListener('click', function() {
+		//	//do stuff here on click
+		//})
+
+		// the # lets jQuery know i'm looking for an ID selector
+		$('#myID').click(function() {
+			// the keyword this targets the thing that was clicked (think event.target in vanilla js)
+			console.log($(this));
+			$(this).html('you clicked me!'); // same as event.target.innerHTML
+
+		});
+
+		document.getElementsByTagName('P') //$(p)
+		var arrElements = $('p');
+		console.log(arrElements)
+
+		// document.getElementsByClassName('goat');
+		console.log($('p.goat'));
+		// be more specific and only grab the list items with the class of goat
+		console.log($('li.goat'));
+
+		// query selector only grabs the first element that matches the query
+		document.querySelector('li')
+		console.log(document.querySelector('li'));
+
+		// querySelectorAll grabs all instances that match the querry as an array
+		console.log(document.querySelectorAll('li'));
+
+
+	});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
